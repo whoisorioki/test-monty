@@ -17,18 +17,3 @@ void pint()
 	}
 	printf("%d\n", head->n);
 }
-
-/**
- * main - program execution
- * @argc: argument count
- * @argv: argument vector
- * Return: 0
- */
-int main(int argc, char **argv)
-{
-	if (argc == 2 && strcmp(argv[1], "pint") == 0)
-	{
-		pint();
-	}
-	return (0);
-}	
