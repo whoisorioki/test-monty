@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define EXIT_FAILURE 1
 
@@ -10,7 +11,7 @@ stack_t *head = NULL;
  * push - pushes an element to the stack
  * @element: an integer
  */
-void push(int element)
+void push(int n)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
 
@@ -19,7 +20,7 @@ void push(int element)
 		exit(EXIT_FAILURE);
 	}
 
-	new_node->element = element;
+	new_node->n = n;
 	new_node->prev = NULL;
 	new_node->next = head;
 	if (head != NULL)
@@ -38,7 +39,7 @@ void pall()
 
 	while (temp != NULL)
 	{
-		print("%d\n", temp->element);
+		printf("%d\n", temp->n);
 		temp = temp->next;
 	}
 }
@@ -55,7 +56,7 @@ int main(int argc, char **argv)
 	{
 		int n = atoi(argv[2]);
 
-		if (n == 0 && (argv[2][0] != '0' || strlen(agrv[2]) != 1))
+		if (n == 0 && (argv[2][0] != '0' || strlen(argv[2]) != 1))
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", __LINE__);
 			exit(EXIT_FAILURE);
