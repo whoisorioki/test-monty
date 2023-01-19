@@ -1,1 +1,3 @@
-test for group project C - Stacks, Queues - LIFO, FIFO
+## C - Stacks, Queues - LIFO, FIFO
+
+Test for group project C - Stacks, Queues - LIFO, FIFO
